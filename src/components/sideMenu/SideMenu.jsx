@@ -37,14 +37,13 @@ const SideMenu = (props) => {
     return <Menu.Item key={menu.key}><Link to={menu.key}>{menu.title}</Link></Menu.Item>;
   };
   return (
-    <div>
-      <Menu
-        mode="inline"
-        theme="dark"
-      >
-        {menuTree}
-      </Menu>
-    </div>
+    <Menu
+      mode="inline"
+      theme="dark"
+      inlineCollapsed={props.collapsed}
+    >
+      {menuTree}
+    </Menu>
   );
 };
 

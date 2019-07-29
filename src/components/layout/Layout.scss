@@ -1,4 +1,11 @@
 .admin-ui-layout {
   display: flex;
   flex-direction: column;
+  background-color: #f0f2f5;
+  &.hasSider {
+    flex-direction: row;
+  }
+  & & {
+    flex: 1;
+  }
 }

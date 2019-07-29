@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
-import { Card, Icon, Layout } from 'antd';
+import { Card, Icon } from 'antd';
 import './app.scss';
 import SideMenu from '@/components/sideMenu/SideMenu.jsx';
+import Layout from '@/components/layout/Layout.jsx';
+import Sider from '@/components/layout/Sider.jsx';
+import Header from '@/components/layout/Header.jsx';
+import Content from '@/components/layout/Content.jsx';
+import Footer from '@/components/layout/Footer.jsx';
 
-const { Header, Sider, Content, Footer } = Layout;
+// const { Header, Sider, Content, Footer } = Layout;
 
 function App (props) {
   const [collapsed, setCollapsed] = useState(false);
   const toggle = () => setCollapsed(!collapsed);
   return (
     <Layout className="app">
-      <Sider width={200} collapsed={collapsed} style={{ height: '100%', overflow: 'auto' }}>
+      <Sider
+        collapsed={collapsed}
+        style={{ height: '100%', overflow: 'auto', width: '200px', backgroundColor: '#001529' }}
+      >
         <div className="logo"></div>
-        <SideMenu/>
+        <SideMenu collapsed={collapsed}/>
       </Sider>
       <Layout>
         <Header style={{ backgroundColor: '#fff', padding: 0 }}>
