@@ -31,7 +31,26 @@
 由于们的依赖指定的是版本范围，所以我们需要使用`yarn.lock`来锁定版本，防止不同开发者之间由于依赖版本不同而引发的奇怪`bug`
 
 ### 3. `ant Design`使用问题
-#### 1. 
+#### 1. `Form`中的`Select`的`onChange`事件中`getFieldsValue`获取不到`Select`最新的`value`值
+
+需求：更改下拉框(`Select`)后重新请求列表数据
+
+问题：当我们通过`onChange`来调用`getFieldsValue`方法时获取到的`value`值是改动之前旧的`value`值，并不是最新的。
+
+目前可以通过`setTimeout`来进行解决：
+```jsx harmony
+handleChange(){
+ const { getFieldsValue } = this.props.form;
+    // const fields = getFieldsValue();
+    // console.log(fields); // if we get it in this way , it just return the previous one value, do not returan current value;
+  setTimeout(function(){
+   const fields = getFieldsValue();
+   console.log(fields); // we can get value through this way, wait for the action completing, we can get the right value;
+  },0)
+}
+```
+
+#### 2. 
 
 ### 4. 小知识点
 * 清理`node_modules`中的一些缓存：`rm -rf node_modules/.cache`
