@@ -28,3 +28,5 @@
 ![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/package-version-caret-range-webstorm.png)
 
 由于们的依赖指定的是版本范围，所以我们需要使用`yarn.lock`来锁定版本，防止不同开发者之间由于依赖版本不同而引发的奇怪`bug`
+
+![](https://video.twimg.com/tweet_video/EDJhCQyXsAAYwIf.mp4)
