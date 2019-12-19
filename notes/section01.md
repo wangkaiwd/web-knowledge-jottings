@@ -1,3 +1,4 @@
+## Section 01
 ### 1. `github`提交后没有出现在`contributions`
 相关阅读：
 * 官方帮助文章： [Why are my contributions not showing up on my profile](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile)
@@ -29,4 +30,14 @@
 
 由于们的依赖指定的是版本范围，所以我们需要使用`yarn.lock`来锁定版本，防止不同开发者之间由于依赖版本不同而引发的奇怪`bug`
 
-[![](https://pbs.twimg.com/tweet_video_thumb/EDJhCQyXsAAYwIf.jpg)](https://video.twimg.com/tweet_video/EDJhCQyXsAAYwIf.mp4)
+### 3. `ant Design`使用问题
+#### 1. 
+
+### 4. 小知识点
+* 清理`node_modules`中的一些缓存：`rm -rf node_modules/.cache`
+* [`webpack`输出配置可以配置存放的目录名](https://github.com/wangkaiwd/webpack-in-depth/commit/b66278b77bb17f65a89fe899c048ed7b1cda4416?diff=unified#diff-eb3896f56b264947d9a7421de4d18e75R63-R64)：
+  ![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/upload-error-again.png)
+* [类型谓词](https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates)的一个例子： 
+  ![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/jottings-ts-type-predicates.png)
+* [`JSON`](https://www.json.org/json-en.html)支持的类型：`Object, Array, string, number, "true", "false", "null"`
+  ![](https://raw.githubusercontent.com/wangkaiwd/drawing-bed/master/jottings-json-support-value.png)
