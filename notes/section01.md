@@ -50,7 +50,22 @@ handleChange(){
 }
 ```
 
-#### 2. 
+#### 2. `Upload`上传非常见类型文件
+
+问题描述：  
+在使用`ant design`的组件的时候，上传`.rar`，`.xls`文件时发现`beforeUpload`中的`File`文件信息中的`type`属性为空字符串。
+
+相关issue: [Upload选择office文件，beforeUpload无法获取到type](https://github.com/ant-design/ant-design/issues/12838)
+
+在`mdn`中有介绍
+> `File.type`: 返回`File`对象所表示文件的媒体类型(`MIME`)
+
+浏览器不会实际读取文件的字节流，来判断它的媒体类型。它基于文件扩展来假设：重命名为`.txt`的`PNG`图像文件为`text/plain`而不是`image/png`。
+
+**`file.type`仅仅对常见文件类型可靠**。例如图像、文档、音频、视频。
+
+**不常见的文件扩展名会返回空字符串**。开发者最好不要依靠这个属性，作为唯一的验证方案
+
 
 ### 4. 小知识点
 * 清理`node_modules`中的一些缓存：`rm -rf node_modules/.cache`
