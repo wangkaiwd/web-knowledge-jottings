@@ -37,6 +37,8 @@
 
 问题：当我们通过`onChange`来调用`getFieldsValue`方法时获取到的`value`值是改动之前旧的`value`值，并不是最新的。
 
+相关`issue`: [after antd Select component onChange events emmit, the getFieldValue methods just return the preivious one's value, do not return curreent value](https://github.com/ant-design/ant-design/issues/6277)
+
 目前可以通过`setTimeout`来进行解决：
 ```jsx harmony
 handleChange(){
